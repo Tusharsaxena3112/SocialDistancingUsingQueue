@@ -31,4 +31,17 @@ public class Customer {
         this.isAwareOfInfection = isAwareOfInfection;
         this.isAwareOfSocialDistancing = isAwareOfSocialDistancing;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "name='" + name + '\'' +
+                ", gender=" + gender +
+                ", mobileNumber='" + mobileNumber + '\'' +
+                ", city='" + city + '\'' +
+                ", isInfected=" + isInfected +
+                ", isAwareOfInfection=" + isAwareOfInfection +
+                ", isAwareOfSocialDistancing=" + isAwareOfSocialDistancing +
+                '}';
+    }
 }
