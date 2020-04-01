@@ -17,5 +17,24 @@ public class LinkedList {
         }
     }
 
+    public Customer deleteFirst(){
+        Node response = first;
+        if(first.getNext()==null){
+            first = last = null;
+        }
+        else{
+            var second = first.getNext();
+            first = null;
+            first = second;
+        }
+        return response.getData();
+    }
 
+    public void show(){
+        var current = first;
+        while(current!=null){
+            System.out.println(current.getData());
+            current=current.getNext();
+        }
+    }
 }

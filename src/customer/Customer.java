@@ -10,8 +10,10 @@ public class Customer {
     private boolean isAwareOfSocialDistancing=false;
 
     //Constructor
+//
 
-    public Customer(String name, char gender, String mobileNumber, String city,
+
+    public Customer(String name,char gender, String mobileNumber, String city,
                     boolean isInfected, boolean isAwareOfInfection,
                     boolean isAwareOfSocialDistancing) {
         this.name = name;
