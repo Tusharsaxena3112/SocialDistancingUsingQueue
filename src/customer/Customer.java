@@ -1,14 +1,5 @@
 package customer;
 
-
-//        String name
-//        Character gender
-//        String mobileNumber
-//        String location / city
-//        Boolean isInfected
-//        Boolean isAwareOfInfection
-//        Boolean isAwareOfSocialDistancing
-
 public class Customer {
     private String name;
     private char gender;
