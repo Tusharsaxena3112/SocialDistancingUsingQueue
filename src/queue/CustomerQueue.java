@@ -30,5 +30,9 @@ public class CustomerQueue {
         linkedList.show();
     }
 
+    public boolean isEmpty(){
+        return linkedList.isEmpty();
+    }
+
 
 }

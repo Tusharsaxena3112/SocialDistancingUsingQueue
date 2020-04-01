@@ -34,8 +34,13 @@ public class LinkedList {
         var current = first;
         while(current!=null){
             System.out.println(current.getData());
+//            System.out.println("---------------------------------------------s");
             current=current.getNext();
         }
+    }
+
+    public boolean isEmpty(){
+        return first==null;
     }
 
 }

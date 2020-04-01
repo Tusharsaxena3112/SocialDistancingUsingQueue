@@ -9,19 +9,18 @@ import java.util.Scanner;
 public class DriverClass {
     public static void main(String[] args) {
         CustomerQueue customerQueue = new CustomerQueue();
-        while(true){
+        while(true) {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter the essentials details to enter into the market" +'\n');
+            System.out.println("Enter the essentials details to enter into the market" + '\n');
             System.out.println("What is your name?");
             String name = scanner.nextLine();
             System.out.println("Enter your mobile number: It must be in the form 91-XXXXXXXXXX");
             String mobNumber = scanner.nextLine().trim();
             System.out.println(mobNumber.matches("^91-[1-9][0-9]{9}$"));
-            while(true){
-                if(mobNumber.matches("^91-[1-9][0-9]{9}$")){
+            while (true) {
+                if (mobNumber.matches("^91-[1-9][0-9]{9}$")) {
                     break;
-                }
-                else{
+                } else {
                     System.out.println("Enter your phone number again: your mob number should not start with 0");
                 }
                 mobNumber = scanner.nextLine();
@@ -36,35 +35,31 @@ public class DriverClass {
             System.out.println("Whether you are aware of infection");
             boolean isAwareOfInfection = scanner.nextBoolean();
             System.out.println("Whether aware of social distancing");
-            boolean isAwareOfSocialDistancing=scanner.nextBoolean();
-            if(isInfected){
+            boolean isAwareOfSocialDistancing = scanner.nextBoolean();
+            if (isInfected) {
                 System.out.println("Hospitalised");
-            }
-            else if(isAwareOfInfection){
+            } else if (isAwareOfInfection) {
                 System.out.println("Quarantine");
-            }
-            else{
-                if(!isAwareOfSocialDistancing){
-                    customerQueue.enqueue(new Customer(name,gender,mobNumber,city,isInfected,isAwareOfInfection,isAwareOfSocialDistancing));
-                }
-                else{
-                    for (int i = 0;i<=2;i++){
+            } else {
+                if (!isAwareOfSocialDistancing) {
+                    customerQueue.enqueue(new Customer(name, gender, mobNumber, city, isInfected, isAwareOfInfection, isAwareOfSocialDistancing));
+                } else {
+                    for (int i = 0; i <= 2; i++) {
                         customerQueue.enqueue(null);
                     }
-                    customerQueue.enqueue(new Customer(name,gender,mobNumber,city,isInfected,isAwareOfInfection,isAwareOfSocialDistancing));
+                    customerQueue.enqueue(new Customer(name, gender, mobNumber, city, isInfected, isAwareOfInfection, isAwareOfSocialDistancing));
                 }
             }
-            System.out.println("Do you want to add other Customer: y or n");
-            String choice  = scanner.nextLine();
-            if(choice.equals("n")){
+            System.out.println("Do you want to add other Customer: 1 for no or 0 for yes");
+            int choice = scanner.nextInt();
+            if (choice==1) {
                 break;
             }
-            for (int k = 0;k<customerQueue.getSize();k++){
-                customerQueue.display();
-                customerQueue.dequeue();
-            }
-
         }
-
+        while(!customerQueue.isEmpty()){
+            customerQueue.display();
+            customerQueue.dequeue();
+            System.out.println("-------------------------------------------");
+        }
     }
 }
