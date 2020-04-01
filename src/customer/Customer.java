@@ -1,13 +1,13 @@
 package customer;
 
 public class Customer {
-    private String name;
-    private char gender;
-    private String mobileNumber;
-    private String city;
-    private boolean isInfected;
-    private boolean isAwareOfInfection;
-    private boolean isAwareOfSocialDistancing;
+    private String name="cannot be null";
+    private char gender='N';
+    private String mobileNumber="cannot be null";
+    private String city="cannot be null";
+    private boolean isInfected=false;
+    private boolean isAwareOfInfection=false;
+    private boolean isAwareOfSocialDistancing=false;
 
     //Constructor
 
