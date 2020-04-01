@@ -37,4 +37,5 @@ public class LinkedList {
             current=current.getNext();
         }
     }
+
 }

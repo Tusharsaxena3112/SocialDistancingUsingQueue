@@ -60,10 +60,11 @@ public class DriverClass {
             if(choice.equals("n")){
                 break;
             }
-//            while(){
-//
-//            }
-//            customerQueue.display();
+            for (int k = 0;k<customerQueue.getSize();k++){
+                customerQueue.display();
+                customerQueue.dequeue();
+            }
+
         }
 
     }
