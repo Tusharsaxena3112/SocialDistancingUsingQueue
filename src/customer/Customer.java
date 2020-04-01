@@ -27,7 +27,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return '\n'+
                 "name='" + name + '\'' +
                 ", gender=" + gender +
                 ", mobileNumber='" + mobileNumber + '\'' +
@@ -35,6 +35,6 @@ public class Customer {
                 ", isInfected=" + isInfected +
                 ", isAwareOfInfection=" + isAwareOfInfection +
                 ", isAwareOfSocialDistancing=" + isAwareOfSocialDistancing +
-                '}';
+                '\n';
     }
 }

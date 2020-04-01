@@ -15,4 +15,7 @@ public class CustomerQueue {
         return customer;
     }
 
+    public void display(){
+        linkedList.show();
+    }
 }
