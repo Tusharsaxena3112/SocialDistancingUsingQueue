@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class DriverClass {
     public static void main(String[] args) {
         CustomerQueue customerQueue = new CustomerQueue();
-        String choice = "yes";
         while(true){
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter the essentials details to enter into the market" +'\n');
@@ -56,7 +55,7 @@ public class DriverClass {
                 }
             }
             System.out.println("Do you want to add other Customer: y or n");
-            choice  = scanner.nextLine();
+            String choice  = scanner.nextLine();
             if(choice.equals("n")){
                 break;
             }
