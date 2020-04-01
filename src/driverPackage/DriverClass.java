@@ -22,7 +22,15 @@ public class DriverClass {
             else{
                 System.out.println("Enter your phone number again: your mob number should not start with 0");
             }
+            mobNumber = scanner.nextLine();
         }
-
+        System.out.println("Enter your city:");
+        String city = scanner.nextLine();
+        System.out.println("Whether you are infected or not: true or false as it is.");
+        boolean isInfected = scanner.nextBoolean();
+        System.out.println("Whether you are aware of infection");
+        boolean isAwareOfInfection = scanner.nextBoolean();
+        System.out.println("Whether aware of social distancing");
+        boolean isAwareOfSocialDistancing=scanner.nextBoolean();
     }
 }
